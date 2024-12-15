@@ -4209,7 +4209,6 @@ GameObject:
   - component: {fileID: 4558182643437266003}
   - component: {fileID: 2759998268450079654}
   - component: {fileID: 7714861485743500645}
-  - component: {fileID: 7714861485743500644}
   m_Layer: 7
   m_Name: Llave
   m_TagString: Untagged
@@ -4217,22 +4216,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7714861485743500644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714861485743500643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b53aaa3401d10643b120f755d141131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 0
-  detection:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!114 &7714861485743500645
 MonoBehaviour:
   m_ObjectHideFlags: 0
