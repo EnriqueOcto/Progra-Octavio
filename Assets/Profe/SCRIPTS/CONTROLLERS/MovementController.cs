@@ -1,4 +1,7 @@
+using System.Net.Http.Headers;
 using UnityEngine;
+using System.Drawing;
+using System;
 
 /// <summary>
 /// Un movimiento que requiere fisica se debe de hacer con rigidbody
@@ -25,6 +28,15 @@ namespace Profe
 
         private Corrutinas corrutinas;
 
+        public float playerHeight;
+        public LayerMask whatIsGround;
+        bool grounded;
+
+        public float jumpForce;
+        public float jumpCooldown;
+        public float airMultiplier;
+        bool readyToJump;
+
         private void Awake()
         {
             rb = GetComponent<Rigidbody>();
@@ -33,6 +45,21 @@ namespace Profe
 
         private void Start()
         {
+        }
+
+        private void Update()
+        {
+            //grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+            //Debug.DrawRay(transform.position, Vector3.down, UnityEngine.Color.red, playerHeight + 0.2f);
+
+            //if (Input.GetKeyDown("Space") && readyToJump && grounded)
+            //{
+            //    readyToJump = false;
+
+            //    Jump();
+
+            //    Invoke(nameof(ResetJump), jumpCooldown);
+            //}
         }
 
         private void FixedUpdate()
@@ -85,6 +112,18 @@ namespace Profe
         {
             return Input.GetKey(KeyCode.LeftControl);
         }
+
+        //private void Jump()
+        //{
+        //    rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        //    rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+        //}
+
+        //private void ResetJump()
+        //{
+        //    readyToJump = true;
+        //}
 
     }
 }
